@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IT Club Event</title>
+</head>
+<body>
+  <h1>Welcome to IT Club Event 🚀</h1>
+  <p>This site is deployed using Docker + Nginx</p>
+</body>
+</html>
+
+
+
+<!-- docker run -d \
+  --name mysite \
+  -p 8080:80 \
+  -v $(pwd):/usr/share/nginx/html \
+  nginx 
+  -->
+<!-- Manual work flow
+ Method 2 (EXAM-FRIENDLY) → Using Dockerfile
+
+Create Dockerfile:
+
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/
+🔹 Build image:
+docker build -t mysite-image .
+🔹 Run container:
+docker run -d -p 8080:80 --name mysite-container mysite-image
+✅ 6. Rollback (VERY IMPORTANT POINT)
+
+👉 Stop and remove container:
+
+docker stop mysite-container
+docker rm mysite-container
+
+👉 Run older version image:
+
+docker run -d -p 8080:80 my-old-image
+
+✔️ This is easy rollback
+
+✅ 7. Verify container
+docker ps
+ 
+-->
+  <!-- open on port num = http://localhost:8080/ -->
